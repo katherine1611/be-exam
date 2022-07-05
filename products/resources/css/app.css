@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+.auth-input{
+    @apply p-4 bg-light rounded-lg outline-none focus:border focus:bg-slate-100
+}
+.view-port{
+    @apply bg-black sm:bg-pink-400 md:bg-red-400 lg:bg-green-400 xl:bg-yellow-400
+   w-full sm:w-[50%]
+}
+.btn-hover{
+    @apply hover:bg-slate-500 duration-300 delay-75
+}
+.dashboard-chart{
+    @apply p-4 rounded-lg
+}
+.card{
+    @apply cursor-pointer hover:bg-slate-300 duration-300 delay-75
+}
+.hover-bg{
+    @apply cursor-pointer hover:bg-slate-500 duration-300 delay-75
+}
+.td-padding{
+    @apply py-4 px-10
+}
+.step{
+    @apply text-center w-full relative
+}
+.bullet{
+    @apply w-10 h-10 border-2 inline-block rounded-full text-center relative
+}
+.bullet span{
+    @apply font-bold text-base leading-9 absolute left-[50%] translate-x-[-50%] 
+}
+.check {
+    @apply absolute left-1/2 top-[70%] -translate-y-1/2 -translate-x-1/2 hidden
+}
+
+
+@layer base {
+    nav li {
+        @apply hover:bg-primary-light duration-300 cursor-pointer hover:text-primary
+    }
+}
+
+@layer components {
+    i, nav span {
+        @apply pointer-events-none
+    }
+    th{
+        @apply text-left
+    }
+}
